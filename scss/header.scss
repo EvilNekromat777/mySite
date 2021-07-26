@@ -4,8 +4,7 @@
     top: 0;
     left: 0;
     z-index: 50;
-    padding: 0px 20px;
-    background-color: rgba(0, 0, 0, 0.5);
+    // background-color: rgba(0, 0, 0, 0.5);
     transform: translate(0px, -100%);
 }
 
@@ -16,14 +15,59 @@
 .menu{
     display: flex;
     min-height: 50px;
+    padding: 20px;
     align-items: center;
+    justify-content: flex-end;
     &__link{
-        color:#fff;
-        font-size: 20px;
+        position: relative;
+        color: #aaa;
+        font-size: 24px;
         transition: color 0.3s ease 0s;
-        margin: 0px 20px 0px 0px;
+        margin: 0px 10px;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        transition: 0.5s;
+        overflow: hidden;
+        display: block;
+        &:before{
+            content: '';
+            position: absolute;
+            top: calc(50% - 2px);
+            left: -100%;
+            width: 100%;
+            height: 4px;
+            background: #4DBBC5;
+            transition: 0.5s;
+        }
+        &:hover {
+            color: #fff;
+          }
+        &:hover::before {
+            animation: animate .5s linear forwards; 
+          }
     }
     &__link._active{
-        color:green;
+        color:#fff;
     }
 }
+
+@keyframes animate {
+    0% {
+      top: calc(50% - 2px);
+      left: -100%;
+      height: 4px;
+      z-index: 1;
+    }
+    50% {
+      top: calc(50% - 2px);
+      left: 0;
+      height: 4px;
+      z-index: 1;
+    }
+    100% {
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: -1;
+    }
+  }

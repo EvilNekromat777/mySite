@@ -7,8 +7,6 @@
   top: 0;
   left: 0;
   z-index: 50;
-  padding: 0px 20px;
-  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transform: translate(0px, -100%);
           transform: translate(0px, -100%);
 }
@@ -27,21 +25,91 @@
   display: -ms-flexbox;
   display: flex;
   min-height: 50px;
+  padding: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 .menu__link {
-  color: #fff;
-  font-size: 20px;
+  position: relative;
+  color: #aaa;
+  font-size: 24px;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
-  margin: 0px 20px 0px 0px;
+  margin: 0px 10px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  display: block;
+}
+.menu__link:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: #4DBBC5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.menu__link:hover {
+  color: #fff;
+}
+.menu__link:hover::before {
+  -webkit-animation: animate 0.5s linear forwards;
+          animation: animate 0.5s linear forwards;
 }
 .menu__link._active {
-  color: green;
+  color: #fff;
 }
 
+@-webkit-keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
+
+@keyframes animate {
+  0% {
+    top: calc(50% - 2px);
+    left: -100%;
+    height: 4px;
+    z-index: 1;
+  }
+  50% {
+    top: calc(50% - 2px);
+    left: 0;
+    height: 4px;
+    z-index: 1;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: -1;
+  }
+}
 .figure {
   position: absolute;
   bottom: 0;
@@ -66,6 +134,7 @@
 }
 
 .snip1543 {
+  z-index: 3;
   background-color: #fff;
   color: #ffffff;
   font-family: "Source Sans Pro", sans-serif;
@@ -518,4 +587,5 @@ canvas {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
+  z-index: 2;
 }
