@@ -1624,8 +1624,9 @@ h6 {
   z-index: 2;
 }
 .screen__content_3 {
-  background-image: url(../images/fon3.jpg);
+  background-image: url(../images/fon33.jpg);
   background-size: cover;
+  background-position: center;
   height: 100%;
   width: 100%;
   position: absolute;
@@ -1634,13 +1635,20 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .screen__title {
-  font-size: 50px;
+  font-size: 70px;
+  text-transform: uppercase;
+  display: inline-block;
   color: #fff;
+  text-align: center;
 }
 .screen__body {
   position: absolute;

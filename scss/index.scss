@@ -102,20 +102,25 @@
         position: relative;
         z-index: 2;
         &_3{
-            background-image: url(../images/fon3.jpg);
+            background-image: url(../images/fon33.jpg);
             background-size:cover;
+            background-position: center;
             height: 100%;
             width: 100%;
             position: absolute;
             top: 0;
             left: 0;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
         }
     }
     &__title{
-        font-size: 50px;
+        font-size: 70px;
+        text-transform: uppercase;
+        display: inline-block;
         color:#fff;
+        text-align: center;
     }
     &__body{
         position: absolute;
