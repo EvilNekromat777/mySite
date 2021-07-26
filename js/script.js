@@ -269,3 +269,10 @@ particlesJS("particles-js", {
   });
   
   
+  
+// ======================  Ховер на карточку посередине, 1 слайд  ======================
+$(".hover").mouseleave(
+	function() {
+	  $(this).removeClass("hover");
+	}
+  );
