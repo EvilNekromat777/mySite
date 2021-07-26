@@ -1,18 +1,14 @@
-// Подключаем шрифты
+
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap');
 
-// Шрифт по умолчанию
-$fontfamili: "Lato";
 
-// Подключаем файлы со стилями страниц и элементов
+
 @import "header.scss";
-@import "footer.scss";
 
 // Обнуление: общие параметры
 @import "null.scss";
 
-// Миксины
-@import "mixins.scss";
+
 
 // Оболочка
 .wrapper {
@@ -97,7 +93,8 @@ $fontfamili: "Lato";
     flex: 1 0 100%;
     position: relative;
     &__content{
-        padding: 100px 25px 25px 25px;
+        width: 100%;
+        height: 1005px;
         position: relative;
         z-index: 2;
     }
@@ -129,3 +126,20 @@ $fontfamili: "Lato";
         }
     }
 }
+
+
+
+// ======================  Паутинка  =====================
+canvas {
+    display: block;
+  }
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/fon1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
