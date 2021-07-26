@@ -582,7 +582,7 @@ function lerp({ x, y }, { x: targetX, y: targetY }) {
   const sliderEl = document.getElementById("slider");
   const slider = new Slider(sliderEl);
   
-  // ------------------ Demo stuff ------------------------ //
+  // ---------- Demo stuff ------- //
   
   let timer = 0;
   
@@ -606,3 +606,32 @@ function lerp({ x, y }, { x: targetX, y: targetY }) {
   
   timer = setTimeout(autoSlide, 2000);
   
+
+
+
+  //   ======================  Modal Window    =============================
+(() => {
+	const modalBtns = Array.from(document.querySelectorAll(".otherPages"));
+	modalBtns.forEach(btn => {
+	  btn.onclick = function() {
+		const modal = btn.getAttribute('data-modal');
+		document.getElementById(modal).style.display = "block";
+		document.querySelector("body").style.overflow = 'hidden';
+	  }
+	});
+	
+	const closeBtns = Array.from(document.querySelectorAll(".close-button"));
+	closeBtns.forEach(btn => {
+	  btn.onclick = function() {
+		let modal = btn.closest('.modal');
+		modal.style.display = "none";
+		document.querySelector("body").style.overflow = 'visible';
+	  }
+	});
+	
+	window.onclick = function(event) {
+	  if (event.target.className === "modal") {
+		event.target.style.display = "none";
+	  }
+	}
+	})();

@@ -8,6 +8,7 @@
 @import "3D-slider.scss";
 @import "tabs.scss";
 @import "social.scss";
+@import "modals.scss";
 
 // Обнуление: общие параметры
 @import "null.scss";
@@ -101,18 +102,20 @@
         height: 100%;
         position: relative;
         z-index: 2;
+        background-size:cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         &_3{
-            background-image: url(../images/fon33.jpg);
-            background-size:cover;
-            background-position: center;
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            background-image: url(../images/fon3.jpg);
+            
+        }
+        &_4{
+            background-image: url(../images/fon4.jpg);
+        }
+        &_5{
+            background-image: url(../images/fon5.jpg);
         }
     }
     &__title{
