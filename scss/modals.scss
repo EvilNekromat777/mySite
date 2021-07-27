@@ -136,7 +136,7 @@ $regular-font-weight: 300;
 /* The Modal (background) */
 .modal {
     display: none; 
-    position: absolute; 
+    position: fixed; 
     z-index: 8888; 
     left: 0;
     top: 0;

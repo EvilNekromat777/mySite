@@ -9,6 +9,7 @@
   top: 0;
   left: 0;
   z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-transform: translate(0px, -100%);
           transform: translate(0px, -100%);
 }
@@ -16,7 +17,6 @@
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .wrapper._loaded .header {
@@ -33,7 +33,7 @@
   display: -ms-flexbox;
   display: flex;
   min-height: 50px;
-  padding: 20px;
+  padding: 0px 30px 0px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -43,8 +43,8 @@
 }
 .menu__link {
   position: relative;
-  color: #aaa;
-  font-size: 24px;
+  color: rgba(255, 255, 255, 0.808);
+  font-size: 18px;
   -webkit-transition: color 0.3s ease 0s;
   transition: color 0.3s ease 0s;
   margin: 0px 10px;
@@ -54,6 +54,10 @@
   transition: 0.5s;
   overflow: hidden;
   display: block;
+}
+.menu__link_2 {
+  font-size: 18px;
+  margin: 0px 30px 0px 0px;
 }
 .menu__link:before {
   content: "";
@@ -74,6 +78,47 @@
           animation: animate 0.5s linear forwards;
 }
 .menu__link._active {
+  color: #4DBBC5;
+}
+.menu__link._active:hover {
+  color: #fff;
+}
+.menu__link2 {
+  position: relative;
+  color: rgba(255, 255, 255, 0.808);
+  font-size: 18px;
+  -webkit-transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s;
+  margin: 0px 10px;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  overflow: hidden;
+  display: block;
+}
+.menu__link2:before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: #4DBBC5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.menu__link2:hover {
+  color: #fff;
+}
+.menu__link2:hover::before {
+  -webkit-animation: animate 0.5s linear forwards;
+          animation: animate 0.5s linear forwards;
+}
+.menu__link2__link2._active {
+  color: #4DBBC5;
+}
+.menu__link2__link2._active:hover {
   color: #fff;
 }
 
@@ -1571,7 +1616,7 @@ input:checked ~ .icon-container:nth-child(7) {
 /* The Modal (background) */
 .modal {
   display: none;
-  position: absolute;
+  position: fixed;
   z-index: 8888;
   left: 0;
   top: 0;
@@ -1789,6 +1834,9 @@ input:checked ~ .icon-container:nth-child(7) {
       -ms-flex-align: center;
           align-items: center;
 }
+.footer__block {
+  text-align: center;
+}
 .footer__block p {
   font-size: 18px;
   color: #aaa;
@@ -1799,20 +1847,52 @@ input:checked ~ .icon-container:nth-child(7) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  position: relative;
 }
 .footer__social a {
+  position: relative;
   display: block;
   line-height: 24px;
   margin: 0px 0px 8px 0px;
   color: #5b0b98;
   font-weight: 600;
+  padding: 10px;
+}
+.footer__social a:before, .footer__social a:after {
+  content: "";
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-style: solid;
+  border-color: red;
+}
+.footer__social a:before {
+  border-width: 2px 0 2px 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+.footer__social a:after {
+  border-width: 0 2px 0 2px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+}
+.footer__social a:hover:before, .footer__social a:hover:after {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.footer__social-wrapper {
+  margin: 0px 20px 0px 0px;
 }
 .footer__social-icons {
   width: 31px;
@@ -1919,7 +1999,7 @@ h6 {
 }
 
 .title {
-  padding: 94px 0px 0px 0px;
+  padding: 65px 0px 0px 0px;
   text-align: center;
   font-size: 70px;
   color: #fff;
