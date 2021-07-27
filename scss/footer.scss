@@ -1,0 +1,49 @@
+.footer{
+    width: 100%;
+    padding: 20px 0px;
+    position: relative;
+    z-index: 5;
+    // background-color: rgba(0, 0, 0, 0.808);
+    background: #6f1684; /* Old browsers */ background: -webkit-linear-gradient(left, #6f1684, #5b0b98, #53afba); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to right, #6f1684, #5b0b98, #53afba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    &__container{
+        max-width: 1380px;
+        margin: 0 auto;
+    }
+    &__body{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__block{
+        p{
+            font-size: 18px;
+            color: #aaa;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+    &__social{
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        a{
+            display: block;
+            line-height: 24px;
+            margin: 0px 0px 8px 0px;
+            color:#5b0b98;
+            font-weight: 600;
+        }
+    }
+    &__social-icons{
+        width: 31px;
+        height: 25px;
+        margin: 0px 8px 0px 0px;
+        padding: 0px 0px 0px 6px;
+        &_wh{
+            width: 40px;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+

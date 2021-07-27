@@ -10,6 +10,10 @@
     position: absolute;
     bottom: 10%;
     right: 6%;
+
+    &_2{
+        position: fixed;
+    }
     @media (max-width: 1250px){
         bottom: 14%;
         right: 10%;
@@ -27,7 +31,7 @@
     display: block;
     position: absolute;
     transition: 1s;
-    z-index: 100;
+    z-index: 4;
 }
 
 .border {
