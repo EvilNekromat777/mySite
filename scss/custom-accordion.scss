@@ -4,6 +4,33 @@
     color: #FFFFFF;
     font-family: 'Sunflower', sans-serif;
     padding-bottom: 2rem;
+    &__link{
+        color: #FFFFFF;
+        padding: 10px;
+        position: relative;
+        &:before, &:after {
+            content: '';
+            position: absolute;
+            transition: transform .5s ease;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-style: solid;
+            border-color: red;
+        }
+        &:before {
+          border-width: 0px 0 2px 0;
+          transform:  scaleX(0);
+        }
+        &:after {
+          border-width: 0 2px 0 2px;
+          transform:  scaleY(0);
+        }
+        &:hover:before, &:hover:after {
+          transform:  scale(1, 1);
+        }
+    }
   }
   .custom-accordion > .item {
     padding: 1rem 2rem;
@@ -33,7 +60,7 @@
       display: table;
       width: 100%;
       max-width: 1200px;
-      margin: 0px auto;
+      margin: 6rem auto 0;
       height: 300px;
       max-height: 1000px;
       overflow: hidden;
