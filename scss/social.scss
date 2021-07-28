@@ -245,10 +245,10 @@
     }
 }
 
-input {
-    // display: none;
-    // position: absolute;
-    // z-index: 100;
+.social__input {
+    display: none;
+    position: absolute;
+    z-index: 100;
 }
 
 input:checked ~ label {

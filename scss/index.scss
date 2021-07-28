@@ -210,9 +210,9 @@ Mixins
 }
 
 
-/*--------------------
-Wrapper
---------------------*/
+// /*--------------------
+// Wrapper
+// --------------------*/
 .contacts__wrapper {
   @include center;
   width: 369px;
@@ -221,8 +221,6 @@ Wrapper
   transform-style: preserve-3d;
   transform: translate(-50%, -50%) perspective(600px) rotateY(20deg) rotateX(10deg);
   border: 2px solid #000;
-
-//   #5b0b98
 }
 
 .contacts{
@@ -273,9 +271,9 @@ Wrapper
     }
 }
 
-/*--------------------
-Me
---------------------*/
+// /*--------------------
+// Me
+// --------------------*/
 .me {
   position: relative;
   width: 369px;
@@ -321,7 +319,7 @@ Me
 }
 
 
-.text {
+.contacts__me-text {
   position: absolute;
   top: 0;
   left: 0;

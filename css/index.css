@@ -1407,6 +1407,12 @@
   height: 45px;
 }
 
+.social__input {
+  display: none;
+  position: absolute;
+  z-index: 100;
+}
+
 input:checked ~ label {
   border-top-right-radius: 100px;
   border-top-left-radius: 100px;
@@ -1810,7 +1816,6 @@ input:checked ~ .icon-container:nth-child(7) {
   width: 100%;
   padding: 20px 0px;
   position: relative;
-  z-index: 5;
   background: #6f1684;
   /* Old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
@@ -2660,9 +2665,6 @@ canvas {
 /*--------------------
 Mixins
 --------------------*/
-/*--------------------
-Wrapper
---------------------*/
 .contacts__wrapper {
   position: absolute;
   top: 50%;
@@ -2741,9 +2743,6 @@ Wrapper
   margin: 0px 15px 0px 0px;
 }
 
-/*--------------------
-Me
---------------------*/
 .me {
   position: relative;
   width: 369px;
@@ -2786,7 +2785,7 @@ Me
   left: 97px;
 }
 
-.text {
+.contacts__me-text {
   position: absolute;
   top: 0;
   left: 0;
@@ -2804,7 +2803,7 @@ Me
   opacity: 0.3;
   border-radius: 8px;
 }
-.text::after {
+.contacts__me-text::after {
   content: "web-developer";
   width: 100%;
   position: absolute;
