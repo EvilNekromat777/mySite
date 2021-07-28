@@ -10,6 +10,10 @@
         transform: translate(0px, 0px);
         position: absolute;
     }
+    &_3{
+        transform: translate(0px, 0px);
+        position: relative;
+    }
 }
 
 .wrapper._loaded .header{

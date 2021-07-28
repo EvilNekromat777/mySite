@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="author" content="Evgeniya Kireeva">
+	<title>Киреева Евгения</title>
+	<link rel="stylesheet" type="text/css" href="./css/index.css">
+	<link rel="icon" href="./favicon.jpg" type="image/x-icon">
+</head>
+
+<body>
+	
+	<div class="wrapper3">
+
+		<header class="header header_3">
+			<nav class="header__menu menu">
+				<a href="index.html" class="menu__link menu__link_2">Главная</a>
+				<a href="portfolio.html" class="menu__link menu__link_2">Портфолио</a>
+			</nav>
+		</header>
+			
+		<div class="contacts">
+			<div id="container" class="contacts__form"></div>
+			<script id="template">
+				
+				<div class="contact-wrapper">
+					<div class="envelope {{ flipCard ? 'active' : '' }}">
+					<div class="back paper"></div>
+					<div class="content">
+						<div class="form-wrapper">
+						<form>
+							<div class="top-wrapper">
+							<div class="input">
+								<label>Ваше имя</label>
+								<input type="text" name="name"/>
+							</div>
+							<div class="input">
+								<label>Телефон</label>
+								<input type="text" name="phone"/>
+							</div>
+							<div class="input">
+								<label>Email</label>
+								<input type="text" name="_replyto"/>
+							</div>
+							</div>
+							<div class="bottom-wrapper">
+							
+							<div class="input">
+								<label>Сообщение</label>
+								<textarea rows="5" name="message"></textarea>
+							</div>
+							<div class="submit">
+								<div class="submit-card" on-click="toggle('flipCard')">Отправить</div>
+							</div>
+							</div>
+						</form>
+						</div>
+					</div>
+					<div class="front paper"></div>
+					</div>
+				</div>
+				
+			</script>
+
+			<div class="contacts__text">
+				<div class="contacts__text-wrapper">
+					<p>КОНТАКТЫ:</p>
+					<a href="https://github.com/EvilNekromat777" target="blank"><img src="./images/icons/01.png" class="contacts__icon" alt=""> GitHub</a>
+					<a href="https://codepen.io/evilnekromat777/pens/public" target="blank"><img src="./images/icons/02.png" class="contacts__icon" alt=""> CodePen</a>
+					<a href="https://vk.com/evilnekronat" target="blank"><img src="./images/icons/03.jpg" class="contacts__icon" alt=""> VK</a>
+					<a href="https://api.whatsapp.com/send/?phone=79650103203" target="blank"><img src="./images/icons/04.png" class="contacts__icon contacts__icon_wh" alt=""> WhatsApp</a>
+					<a href="mailto:evil-nekromat777@mail.ru" target="blank"><img src="./images/icons/05.png" class="contacts__icon" alt=""> eMail</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="contacts__me">
+				<div class="contacts__wrapper">
+					<div class="card">
+					<div class="me">
+						<div class="eye"></div>
+					</div>
+					<div class="text">
+						EVIL
+					</div>
+					</div>
+				</div>
+		</div>
+
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__body">
+
+					<div class="footer__block">
+						<p>2021</p>
+						<p>Санкт-Петербург</p>
+					</div>
+
+					<div class="footer__block">
+						<p>Киреева Евгения Николаевна</p>
+						<p>© Копирование с сайта запрещено</p>
+					</div>
+
+
+				</div>
+			</div>
+		</footer>				
+			
+
+	</div>
+
+	
+
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/ractive@0.9"></script>
+	<script src="./js/script3.js" defer></script>
+</body>
+
+</html>
