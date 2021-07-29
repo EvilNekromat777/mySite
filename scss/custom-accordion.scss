@@ -4,7 +4,6 @@
     color: #FFFFFF;
     font-family: 'Sunflower', sans-serif;
     padding-bottom: 10px;
-    padding: 0px 10px 10px 10px;
     &__link{
         color: #FFFFFF;
         padding: 10px;
@@ -174,3 +173,10 @@
     transition: all 0.3s cubic-bezier(0.8, 0.16, 0.42, 0.89);
   }
   
+
+  // =====================================================================
+  @media (max-width: 600px){
+    .custom-accordion {
+      padding: 0px 10px 10px 10px;
+    }
+  }

@@ -2,9 +2,8 @@
     width: 100%;
     padding: 20px 0px;
     position: relative;
-   
-    // background-color: rgba(0, 0, 0, 0.808);
-    background: #6f1684; /* Old browsers */ background: -webkit-linear-gradient(left, #6f1684, #5b0b98, #53afba); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(to right, #6f1684, #5b0b98, #53afba); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 15px;
+    background: -webkit-linear-gradient(left, #092c4e,#026773,#00a49b);/* Chrome 10-25, Safari 5.1-6 */                          background: linear-gradient(to right, #092c4e,#026773,#00a49b);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */                                               
     &__container{
         max-width: 1380px;
         margin: 0 auto;
@@ -33,7 +32,7 @@
             display: block;
             line-height: 24px;
             margin: 0px 0px 8px 0px;
-            color:#5b0b98;
+            color:rgb(38, 15, 167);
             font-weight: 600;
             padding: 10px;
             &:before, &:after {
@@ -74,5 +73,22 @@
             padding: 0;
         }
     }
+}
+
+// =======================================================================
+@media (max-width: 900px){
+    .footer{
+        &__body{
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width: 490px){
+    .footer{
+    &__social{
+        flex-direction: column;
+    }
+}
 }
 
