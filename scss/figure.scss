@@ -1,14 +1,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 @import url(https://fonts.googleapis.com/css?family=Teko:700);
-
-
-
-
 // ===================================================================================
 // ===================================================================================
-
-
 .figure{
     position: absolute;
     bottom: 0;
@@ -21,14 +15,9 @@
         width: 70%;
         margin: 0 auto;
     }
-
-    @media (max-width: 1040px){
-        width: 78%;
-    }
-    
 }
 .snip1543 {
-    z-index: 3;
+  z-index: 3;
   background-color: #fff;
   color: #ffffff;
   font-family: 'Source Sans Pro', sans-serif;
@@ -36,8 +25,8 @@
   margin: 0 10px 0 0;
   max-width: 415px;
   width: 100%;
+  height: 301px;
   cursor: pointer;
-//   min-width: 230px;
   overflow: hidden;
   position: relative;
   text-align: left;
@@ -110,13 +99,6 @@
   z-index: 1;
   bottom: 0;
   padding: 25px 40% 25px 20px;
-
-    @media (max-width: 1300px){
-        padding: 15px 20% 15px 10px;
-    }
-    @media (max-width: 915px){
-        padding: 10px 5px 10px 7px;
-    }
 }
 
 .snip1543 figcaption:before,
@@ -155,30 +137,12 @@
   font-size: 36px;
   font-weight: 700;
   line-height: 1em;
-
-    @media (max-width: 1240px){
-        font-size: 26px;
-        font-weight: 500;
-    }
-    @media (max-width: 875px){
-        font-size: 20px;
-        font-weight: 400;
-    }
 }
 
 .snip1543 p {
   font-size: 0.9em;
   margin: 15px 0px 0px 0px;
   line-height: 20px;
-
-  @media (max-width: 1550px){
-      text-transform: none;
-      line-height: 1.1;
-  }
-  @media (max-width: 1130px){
-    font-size: 13px;
-    margin: 5px 0px 0px 0px;
-  }
 }
 
 .snip1543 a {
@@ -229,4 +193,61 @@
   transform: skew(-30deg) translateX(-30%);
   -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
+}
+
+// ==============================================================
+// ==============================================================
+@media (max-width: 1500px){
+  .figure{
+    &__content{
+        width: 90%;
+    }
+  }
+}
+@media (max-width: 1000px){
+  .snip1543 figcaption {
+    padding: 10px 15px 10px 10px;
+  }
+  .snip1543{
+    height: 230px;
+    h3 {
+      font-size: 30px;
+    }
+  }
+}
+@media (max-width: 767px){
+  .figure{
+    &__content{
+        display: block;
+        width: 380px;
+    }
+  }
+  .snip1543{
+    height: 180px;
+    margin: 0px 0px 8px 0px;
+  }
+  .snip1543 figcaption {
+    padding: 20px;
+  }
+}
+@media (max-width: 424px){
+  .figure{
+    &__content{
+        width: 280px;
+    }
+  }
+  .snip1543{
+    height: 150px;
+    margin: 0px 0px 5px 0px;
+    h3 {
+      font-size: 20px;
+    }
+  }
+  .snip1543 figcaption {
+    padding: 15px;
+  }
+  .snip1543 p {
+    font-size: 12px;
+    line-height: 15px;
+  }
 }

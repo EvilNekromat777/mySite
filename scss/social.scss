@@ -313,3 +313,9 @@ input:checked ~ .icon-container:nth-child(7) {
     background: #3d89c6;
 }
 
+// =========================================================
+@media (max-width: 767px){
+    .social{
+        display: none;
+    }
+}
