@@ -14,6 +14,13 @@
         transform: translate(0px, 0px);
         position: relative;
     }
+    &__menu{
+        display: flex;
+        min-height: 50px;
+        padding: 0px 30px 0px 0;
+        align-items: center;
+        justify-content: flex-end;
+    }
 }
 
 .wrapper._loaded .header{
@@ -124,3 +131,101 @@
       z-index: -1;
     }
   }
+
+
+//   ========================================================
+
+//   ========================================================
+
+@media (max-width:767px){
+	body.lock{
+		overflow: hidden;
+	}
+	.header__body {
+		// height: 50px;
+        // background-color: rgba(107, 105, 105, 0.897);
+        background-color: #2d3439b4;
+        padding: 15px 20px 15px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+        z-index: 2;
+	}
+	.header__burger {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		z-index: 3;
+	}
+	.header__burger span{
+		position: absolute;
+		background-color: #fff;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger:before,
+	.header__burger:after{
+		content: '';
+		background-color: #fff;
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left: 0;
+		transition: all 0.3s ease 0s;
+	}
+	.header__burger:before{
+		top: 0;
+	}
+	.header__burger:after{
+		bottom: 0;
+	}
+
+	.header__burger.active span{
+		transform: scale(0);
+	}
+
+	.header__burger.active:before{
+		transform:rotate(45deg);
+		top: 9px;
+	}
+	.header__burger.active:after{
+		transform:rotate(-45deg);
+		bottom: 9px;
+	}
+
+    
+	.header__menu {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		width: 100%;
+        height: 100vh;
+		overflow: auto;
+		transition: top 0.9s ease 0s;
+        background-color: #75797e;
+		justify-content: flex-start;
+        align-items: flex-start;
+        padding: 70px 0px 0px 20px;
+        z-index: 1;
+	}
+
+	.header__menu.active{
+		top: 0;
+	}
+
+	.header__list {
+		display: block;
+	}
+	.header__list li{
+		margin: 0px 0px 20px 0px;
+	}
+	.header__link {
+		font-size: 24px;
+	}
+}

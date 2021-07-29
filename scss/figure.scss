@@ -3,6 +3,12 @@
 @import url(https://fonts.googleapis.com/css?family=Teko:700);
 
 
+
+
+// ===================================================================================
+// ===================================================================================
+
+
 .figure{
     position: absolute;
     bottom: 0;
@@ -37,6 +43,8 @@
   text-align: left;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
+  border-radius: 6px;
+  
   &:last-child{
       margin: 0;
   }
