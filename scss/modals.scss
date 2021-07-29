@@ -96,7 +96,11 @@ $regular-font-weight: 300;
 	width: calc(33.3333% - 15px);
     margin: 7px;
     @media (max-width: 1180px){
-        width: calc(50% - 15px);
+        width: calc(40% - 15px);
+        margin: 7px auto;
+    }
+    @media (max-width: 1010px){
+      width: calc(50% - 15px);
     }
     &:hover{
         box-shadow: 10px 10px 10px rgb(0 0 0 / 30%);
@@ -120,13 +124,31 @@ $regular-font-weight: 300;
 @media only screen and (max-width: 800px) {
   .q-a__header { font-size: 2.4rem; }
 }
-@media only screen and (max-width: 700px) {
-  .q-a__header { font-size: 2.7rem; } 
-  .q-a__grid { width: calc(50% - 15px); }
-}
-@media only screen and (max-width: 500px) {
+// @media only screen and (max-width: 700px) {
+//   .q-a__header { font-size: 2.7rem; } 
+//   .q-a__grid { width: calc(50% - 15px); }
+// }
+// @media only screen and (max-width: 767px) {
+//   .q-a__header { font-size: 3rem; } 
+//   .q-a__grid { width: calc(100% - 15px); }
+// }
+@media (max-width: 767px){
   .q-a__header { font-size: 3rem; } 
   .q-a__grid { width: calc(100% - 15px); }
+  .modal-button{
+    width: 100%;
+  }
+  .modal-button__wrapper{
+    max-width: 100%;
+  }
+}
+@media (max-width: 426px){
+  .q-a__box{
+    padding: 0px 0px 0px 0px;
+  }
+  .modal-button{
+    padding: 5px 8px;
+  }
 }
 
 
@@ -306,3 +328,25 @@ $regular-font-weight: 300;
     }
 }
 
+@media (max-width: 1305px){
+  .modal-header-question{
+    font-size: 14px;
+  }
+  .pink-modal-header-grid-66 a{
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px){
+  .pink-modal-header-grid-66 a{
+    display: none;
+  }
+}
+@media (max-width: 426px){
+  .pink-modal{
+    max-width: 98%;
+  }
+  .modal-header-question{
+    font-size: 10px;
+    padding-bottom: 5px;
+  }
+}

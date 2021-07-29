@@ -5,7 +5,7 @@
 	  btn.onclick = function() {
 		const modal = btn.getAttribute('data-modal');
 		document.getElementById(modal).style.display = "block";
-		document.querySelector(".wrapper2").style.overflow = 'hidden';
+		document.querySelector("body").style.overflow = 'hidden';
 	  }
 	});
 	
@@ -24,3 +24,16 @@
 	  }
 	}
 	})();
+
+
+	// =================================================================
+	// ==================   Меню - бургер   =========================
+$(document).ready(function() {
+	$('.header__burger').click(function(event) {
+		$('.header__burger,.header__menu').toggleClass('active');
+		$('body').toggleClass('lock');
+	});
+	$('.header__link').click(function(event) {
+		$('.header__burger,.header__menu').removeClass('active');
+	});
+});
