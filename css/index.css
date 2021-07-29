@@ -2044,7 +2044,8 @@ input:checked ~ .icon-container:nth-child(7) {
   background: #4DBBC5;
   color: #FFFFFF;
   font-family: "Sunflower", sans-serif;
-  padding-bottom: 2rem;
+  padding-bottom: 10px;
+  padding: 0px 10px 10px 10px;
 }
 .custom-accordion__link {
   color: #FFFFFF;
@@ -2081,7 +2082,7 @@ input:checked ~ .icon-container:nth-child(7) {
 }
 
 .custom-accordion > .item {
-  padding: 1rem 2rem;
+  padding: 0 2rem;
   margin: 0 auto;
   max-width: 30rem;
 }
@@ -2103,13 +2104,15 @@ input:checked ~ .icon-container:nth-child(7) {
 .custom-accordion > .item > .icon {
   color: #462521;
   font-size: 2rem;
+  display: none;
 }
 
 .custom-accordion > .item > .title {
   font-size: 1.5rem;
+  padding: 15px 0px 5px;
 }
 
-@media screen and (min-width: 800px) and (min-height: 270px) {
+@media screen and (min-width: 800px) and (min-height: 320px) {
   .custom-accordion {
     display: table;
     width: 100%;
@@ -3060,13 +3063,6 @@ h6 {
   font-size: inherit;
 }
 
-.title {
-  padding: 65px 0px 0px 0px;
-  text-align: center;
-  font-size: 70px;
-  color: #fff;
-}
-
 .wrapper {
   overflow: hidden;
   min-height: 100%;
@@ -3226,6 +3222,9 @@ h6 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.screen__content-wrapper {
+  padding: 0px 15px;
+}
 .screen__title {
   font-size: 70px;
   text-transform: uppercase;
@@ -3258,6 +3257,11 @@ h6 {
   left: 0;
 }
 
+@media (max-width: 800px) {
+  .screen__content-wrapper {
+    padding-top: 70px;
+  }
+}
 canvas {
   display: block;
 }

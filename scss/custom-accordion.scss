@@ -3,7 +3,8 @@
     background: #4DBBC5;
     color: #FFFFFF;
     font-family: 'Sunflower', sans-serif;
-    padding-bottom: 2rem;
+    padding-bottom: 10px;
+    padding: 0px 10px 10px 10px;
     &__link{
         color: #FFFFFF;
         padding: 10px;
@@ -33,7 +34,7 @@
     }
   }
   .custom-accordion > .item {
-    padding: 1rem 2rem;
+    padding: 0 2rem;
     margin: 0 auto;
     max-width: 30rem;
   }
@@ -51,11 +52,13 @@
   .custom-accordion > .item > .icon {
     color: #462521;
     font-size: 2rem;
+    display: none;
   }
   .custom-accordion > .item > .title {
     font-size: 1.5rem;
+    padding: 15px 0px 5px;
   }
-  @media screen and (min-width: 800px) and (min-height: 270px) {
+  @media screen and (min-width: 800px) and (min-height: 320px) {
     .custom-accordion {
       display: table;
       width: 100%;
