@@ -17,7 +17,9 @@
 // Обнуление: общие параметры
 @import "null.scss";
 
-
+body{
+    background-color: #333;
+}
 
 .wrapper {
     overflow: hidden;

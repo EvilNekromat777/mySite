@@ -3202,6 +3202,10 @@ h6 {
   font-size: inherit;
 }
 
+body {
+  background-color: #333;
+}
+
 .wrapper {
   overflow: hidden;
   min-height: 100%;
